@@ -1,0 +1,26 @@
+[
+  {
+    "text": "Walmart supermarket grocery milk bread vegetables",
+    "label": "Grocery"
+  },
+  {
+    "text": "Target store supermarket food snacks",
+    "label": "Grocery"
+  },
+  {
+    "text": "McDonalds burger fries coke restaurant",
+    "label": "Restaurant"
+  },
+  {
+    "text": "KFC chicken meal restaurant",
+    "label": "Restaurant"
+  },
+  {
+    "text": "BestBuy laptop charger electronics",
+    "label": "Electronics"
+  },
+  {
+    "text": "Apple store iphone macbook electronics",
+    "label": "Electronics"
+  }
+]
