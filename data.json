@@ -1,26 +1,90 @@
 [
-  {
-    "text": "Walmart supermarket grocery milk bread vegetables",
-    "label": "Grocery"
-  },
-  {
-    "text": "Target store supermarket food snacks",
-    "label": "Grocery"
-  },
-  {
-    "text": "McDonalds burger fries coke restaurant",
-    "label": "Restaurant"
-  },
-  {
-    "text": "KFC chicken meal restaurant",
-    "label": "Restaurant"
-  },
-  {
-    "text": "BestBuy laptop charger electronics",
-    "label": "Electronics"
-  },
-  {
-    "text": "Apple store iphone macbook electronics",
-    "label": "Electronics"
-  }
+ {
+  "text": "Whole Foods Market Total: $87.23 Tax: $6.12 Date: 2025-02-01",
+  "Label": "grocery"
+},
+{
+  "text": "Trader Joe's Grocery Store Total: $54.90 Date: 2025-02-02",
+  "Label": "grocery"
+},
+{
+  "text": "Kroger Supermarket Large Eggs Milk Bread Total: $42.11 Date: 2025-02-03",
+  "Label": "grocery"
+},
+{
+  "text": "Safeway Store Bananas Apples Chicken Total: $63.88 Date: 2025-02-04",
+  "Label": "grocery"
+},
+{
+  "text": "McDonald's Order #5587 Big Mac Fries Total: $12.75 Date: 2025-02-01",
+  "Label": "restaurant"
+},
+{
+  "text": "Starbucks Latte Grande Total: $6.45 Date: 2025-02-02",
+  "Label": "restaurant"
+},
+{
+  "text": "Subway Sandwich Meal Total: $9.50 Date: 2025-02-03",
+  "Label": "restaurant"
+},
+{
+  "text": "Pizza Hut Large Pepperoni Total: $18.40 Date: 2025-02-04",
+  "Label": "restaurant"
+},
+{
+  "text": "H&M Clothing Store Total: $67.45 Date: 2025-02-05",
+  "Label": "retail"
+},
+{
+  "text": "Target Store Home Decor Total: $76.10 Date: 2025-02-06",
+  "Label": "retail"
+},
+{
+  "text": "Macy's Department Store Total: $120.99 Date: 2025-02-07",
+  "Label": "retail"
+},
+{
+  "text": "Best Buy Electronics Laptop Total: $899.99 Date: 2025-02-08",
+  "Label": "electronics"
+},
+{
+  "text": "Apple Store iPhone Purchase Total: $1299.00 Date: 2025-02-09",
+  "Label": "electronics"
+},
+{
+  "text": "Uber Trip Receipt Total: $18.90 Date: 2025-02-10",
+  "Label": "transport"
+},
+{
+  "text": "Lyft Ride Downtown Total: $22.30 Date: 2025-02-11",
+  "Label": "transport"
+},
+{
+  "text": "Shell Gas Station Fuel Total: $54.23 Date: 2025-02-12",
+  "Label": "transport"
+},
+{
+  "text": "CVS Pharmacy Prescription Total: $23.50 Date: 2025-02-13",
+  "Label": "health"
+},
+{
+  "text": "Walgreens Pharmacy Vitamins Total: $34.99 Date: 2025-02-14",
+  "Label": "health"
+},
+{
+  "text": "Delta Airlines Flight Ticket Total: $350.00 Date: 2025-02-15",
+  "Label": "travel"
+},
+{
+  "text": "Airbnb Booking Total: $560.00 Date: 2025-02-16",
+  "Label": "travel"
+},
+{
+  "text": "Netflix Subscription Monthly Total: $15.99 Date: 2025-02-17",
+  "Label": "entertainment"
+},
+{
+  "text": "Spotify Premium Subscription Total: $10.99 Date: 2025-02-18",
+  "Label": "entertainment"
+}
 ]

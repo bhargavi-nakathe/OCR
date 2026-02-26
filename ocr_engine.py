@@ -3,8 +3,12 @@ from preprocess import preprocess_image
 
 def extract_text(image_path):
     processed_img = preprocess_image(image_path)
-    raw_text = pytesseract.image_to_string(processed_img)
-    return clean_text(raw_text)
+    raw_text = custom_config = r'--oem 3 --psm 6'
+    text = pytesseract.image_to_string(
+    processed_img,
+    config=custom_config
+)
+    return clean_text( text)
 
 import re
 
