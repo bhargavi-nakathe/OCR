@@ -2,39 +2,30 @@ import re
 
 def extract_items_and_total(text):
 
-    lines = text.split()
-
     items = []
     total = None
 
-    # Regex for price (integer or decimal)
-    price_pattern = re.compile(r"\d+\.\d+|\d+")
+    # Find total
+    total_match = re.search(r"total[^0-9]*(\d+\.\d+)", text.lower())
+    if total_match:
+        total = float(total_match.group(1))
 
-    # Try line-based splitting first
-    raw_lines = text.split("\n")
+    # Find all item + price patterns
+    # Example match: "Milk 2.50"
+    item_pattern = re.findall(r"([A-Za-z ]+)\s+(\d+\.\d+)", text)
 
-    for line in raw_lines:
+    for name, price in item_pattern:
 
-        # Look for total
-        if "total" in line.lower():
-            numbers = price_pattern.findall(line)
-            if numbers:
-                total = float(numbers[-1])
+        # Skip total
+        if "total" in name.lower():
             continue
 
-        # Look for item + price
-        numbers = price_pattern.findall(line)
+        clean_name = name.strip()
 
-        if numbers:
-            price = float(numbers[-1])
-
-            # Remove price from line to get item name
-            item_name = re.sub(price_pattern, "", line).strip()
-
-            if len(item_name) > 2:
-                items.append({
-                    "name": item_name,
-                    "price": price
-                })
+        if len(clean_name) > 2:
+            items.append({
+                "name": clean_name,
+                "price": float(price)
+            })
 
     return items, total

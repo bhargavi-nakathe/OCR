@@ -20,6 +20,8 @@ if uploaded_file is not None:
 
     st.subheader("Extracted Items")
 
+    st.subheader("RAW OCR TEXT DEBUG")
+    #st.text(repr(text))
     for item in items:
         st.write(f"{item['name']} - {item['price']}")
 
