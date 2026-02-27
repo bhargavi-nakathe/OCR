@@ -1,6 +1,7 @@
 import streamlit as st
 from ocr_engine import extract_text
 from classifier import classify_receipt
+from parser import extract_items_and_total
 
 st.title("Receipt OCR & Classification")
 
@@ -15,8 +16,15 @@ if uploaded_file is not None:
     # Extract text
     text = extract_text("temp.jpg")
 
-    st.subheader("Extracted Text")
-    st.write(text)
+    items, total = extract_items_and_total(text)
+
+    st.subheader("Extracted Items")
+
+    for item in items:
+        st.write(f"{item['name']} - {item['price']}")
+
+    st.subheader("Total")
+    st.success(total)
 
     # Classify
     category, confidence = classify_receipt(text)
