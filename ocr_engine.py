@@ -1,18 +1,19 @@
 import pytesseract
+import pandas as pd
 from preprocess import preprocess_image
 
-def extract_text(image_path):
+def extract_word_data(image_path):
+
     processed_img = preprocess_image(image_path)
-    raw_text = custom_config = r'--oem 3 --psm 6'
-    text = pytesseract.image_to_string(
-    processed_img,
-    config=custom_config
-)
-    return clean_text( text)
 
-import re
+    data = pytesseract.image_to_data(
+        processed_img,
+        output_type=pytesseract.Output.DATAFRAME,
+        config="--oem 3 --psm 4"
+    )
 
-def clean_text(text):
-    text = re.sub(r"[^A-Za-z0-9\s.%$]", "", text)
-    text = re.sub(r"\s+", " ", text)
-    return text.strip()
+    # Remove empty rows
+    data = data[data.conf > 40]   # remove low confidence words
+    data = data[data.text.notna()]
+
+    return data
